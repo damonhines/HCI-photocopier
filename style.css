@@ -1,0 +1,21 @@
+
+html {
+    background: #303030;
+    color: #CC0066;
+    font-family: Courier, sans-serif;
+    font-size: 18px;
+}
+
+h1, h2 {
+    font-family: 'Press Start 2P';
+}
+
+.container {
+    width: 600px;
+    margin: 40px auto;
+}
+
+.keyboard {
+    width: 600px;
+    height: 150px;
+}
