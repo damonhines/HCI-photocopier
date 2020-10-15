@@ -1,4 +1,4 @@
-[!Hearing Test](https://cdn.pixabay.com/photo/2017/01/18/17/14/girl-1990347_960_720.jpg)]
+![Test Image 7](https://cdn.pixabay.com/photo/2017/01/18/17/14/girl-1990347_960_720.jpg)
 
 
 Turns out that humans don't really hear all frequencies the same (e.g., with the same intensity, clarity, etc).
