@@ -7,24 +7,17 @@
     <link rel="stylesheet" href="style.css"/>
   </head>
   <body>
-    <h1>
+    <h1 style="text-align:center">
       Hearing Test
     </h1>
-    <p>
-      Press the the start button to start the test. 
-      The sound will start playing very quietly, gradually getting louder.
-    </p>
-    <p>Press the space button as
-      soon as you hear the sound. 
-    </p>
+    <div id="testing_field">
+          <p id="instructions">Press the start button to start the test</p>
+      <button class="pure-material-button-contained" id="main_button">Start</button>
+      <input id="volume" type="range" min="0" max="1" step="0.05" value="0"/>
+    </div>
     <div id="keyboard"></div>
     <section></section>
     <script src="js/waveCanvas.js"></script>
-    
-    <script src="js/querty-hancock.js"></script>
-
     <script src="js/main.js"></script>
-
-
   </body>
 </html>

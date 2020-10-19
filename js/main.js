@@ -1,93 +1,74 @@
 const ctx = new (window.AudioContext || window.webkitAudioContext)()
 const fft = new AnalyserNode(ctx, { fftSize: 2048 })
 createWaveCanvas({ element: 'section', analyser: fft })
+const startButton = document.getElementById('main_button');
+const instructions = document.getElementById('instructions');
+const volumeSlider = document.getElementById('volume');
+//Start the oscillator
+//State defines the state of the test, button has different effect depending on state
+let state = 1;
+let oscillator = ctx.createOscillator();
+let oscGain = ctx.createGain();
+let currentFrequ = 100;
+oscillator.start(0);
+res = []
 
-var keyboard = new QwertyHancock({
-  id: 'keyboard',
-  width: innerWidth/2,
-  height: innerHeight/3,
-  octaves: 2,
-  startNote: 'A3',
-  whiteNotesColour: '#9e0035',
-  blackNotesColour: '#9e0035',
-  activeColour: '#9e0035',
-  borderColour: '#9e0035'
-})
+function runTest(state) {
+  //Connect oscillator.
+  console.log("running test at ",currentFrequ, " hz")
+  oscGain.connect(ctx.destination);
+  oscGain.gain.value=0;
+  oscillator.type = 'sine';
+  oscillator.frequency.value = currentFrequ;
+  oscillator.connect(oscGain);
+  oscillator.connect(fft);
+  let result = (oscGain.gain.value, currentFrequ);
+  res.push(result);
+  //Check next octave
+  //if we reach the edge of the audible range
+  if (currentFrequ > 20000) {
+    state = 3;
+  } else{
+    currentFrequ = currentFrequ * 2
+  }
 
-
-nodes = [];
-
-
-nodes = [];
-gainz = [];
-
-
-function adsr (param, peak, val, time, a, d, s) {
-  /*
-                peak
-                /\   val  val
-               /| \__|____|
-              / |    |    |\
-             /  |    |    | \
-       init /a  |d   |s   |r \ init
-
-       <----------time------------>
-       thANk YoU N!CK!!!
-  */
-  const initVal = param.value
-  param.setValueAtTime(0, time)
-  param.linearRampToValueAtTime(peak, time+a)
-  param.linearRampToValueAtTime(val, time+a+d)
-  param.linearRampToValueAtTime(val, time+a+d+s)
 }
 
-const p = 0.3 // peak value for all tones
-const v = 0.1 
+//with volume slider adjust volume
+volumeSlider.addEventListener('change', function () {
+  console.log("volume changed")
+  oscGain.gain.value = this.value;
+});
 
-keyboard.keyDown = function (note, frequency) {
-    var oscillator = ctx.createOscillator();
-    var oscGain = ctx.createGain();
-    oscGain.gain.value = 0.2;
-    adsr(oscGain.gain, p,v, ctx.currentTime, 1,0.1,0.4)
-    oscGain.connect(ctx.destination); 
-    oscillator.type = 'sine';
-    oscillator.frequency.value = frequency;
-    oscillator.start(0);
-    oscillator.connect(oscGain);
-    oscillator.connect(fft);
-    gainz.push(oscGain);
-    nodes.push(oscillator);
+startButton.addEventListener('click',buttonHandler);
 
-};
+//Run the test by handling the button
+function buttonHandler(){
+  console.log("button pressed");
+  if (state == 1){
+  startButton.innerHTML = "I can hear it";
+  instructions.innerHTML = "Adjust the volume slider until you can barely hear the sound";
+  runTest(state);
+  state = state + 1;
+  }
+   
 
-function stopNotes(i){
-  //nodes[i].stop(ctx.currentTime+1);
-  gainz[i].disconnect();
-  nodes[i].disconnect();
+  else if (state == 2){
+  startButton.innerHTML = "Next test";
+  oscillator.disconnect();
+  oscGain.disconnect();
+  volumeSlider.value=0;
+  instructions.innerHTML = "When you are ready go to the next test";
+  state = state - 1;
+  }
+
+   //end of the test
+   else if (state == 3) {
+    console.log(res);
+    startButton.innerHTML = "Finish test";
+    instructions.innerHTML = "Find your results in the console";
+  }
+
 }
-keyboard.keyUp = function (note, frequency) {
-   for (var i = 0; i < nodes.length; i++) {
-         if (Math.round(nodes[i].frequency.value) == Math.round(frequency)) {
-             gainz[i].gain.linearRampToValueAtTime(0, ctx.currentTime + 0.4)
-             setTimeout(stopNotes(i),1000);  
-         }
-        }
-    // var new_nodes = [];
-    // var new_gainz = [];
 
-    // for (var i = 0; i < nodes.length; i++) {
-    //     if (Math.round(nodes[i].frequency.value) === Math.round(frequency)) {
-    //         //nodes[i].stop(ctx.currentTime + 3);
-    //         //nodes[i].disconnect();
 
-    //         gainz[i].disconnect();
-    //     } else {
-    //         new_nodes.push(nodes[i]);
-    //         new_gainz.push(nodes[i]);
-            
-    //     }
-    // }
-
-    // nodes = new_nodes;
-    // gainz = new_gainz;
-};
