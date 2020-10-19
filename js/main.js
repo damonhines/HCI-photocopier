@@ -13,7 +13,7 @@ let currentFrequ = 100;
 oscillator.start(0);
 res = []
 
-function runTest(state) {
+function runTest() {
   //Connect oscillator.
   console.log("running test at ",currentFrequ, " hz")
   oscGain.connect(ctx.destination);
@@ -22,11 +22,12 @@ function runTest(state) {
   oscillator.frequency.value = currentFrequ;
   oscillator.connect(oscGain);
   oscillator.connect(fft);
-  let result = (oscGain.gain.value, currentFrequ);
+  let result = [oscGain.gain.value, currentFrequ];
   res.push(result);
   //Check next octave
   //if we reach the edge of the audible range
-  if (currentFrequ > 20000) {
+  if (currentFrequ >= 20000) {
+    console.log("High frequency reached, ending test")
     state = 3;
   } else{
     currentFrequ = currentFrequ * 2
@@ -44,12 +45,12 @@ startButton.addEventListener('click',buttonHandler);
 
 //Run the test by handling the button
 function buttonHandler(){
-  console.log("button pressed");
+  console.log("button pressed ",state);
   if (state == 1){
   startButton.innerHTML = "I can hear it";
   instructions.innerHTML = "Adjust the volume slider until you can barely hear the sound";
-  runTest(state);
   state = state + 1;
+  runTest(state);
   }
    
 
@@ -65,6 +66,9 @@ function buttonHandler(){
    //end of the test
    else if (state == 3) {
     console.log(res);
+    oscillator.disconnect();
+    oscGain.disconnect();
+    volumeSlider.value=0;
     startButton.innerHTML = "Finish test";
     instructions.innerHTML = "Find your results in the console";
   }
