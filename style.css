@@ -5,7 +5,9 @@ html {
     font-family: Courier, sans-serif;
     font-size: 24px;
 }
-
+p {
+    color: white;   
+}
 h1, h2 {
     font-family: 'Press Start 2P';
     color: #CC0066;
