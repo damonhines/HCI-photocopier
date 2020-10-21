@@ -1,13 +1,14 @@
 
 html {
     background: #303030;
-    color: #CC0066;
+    color: white;
     font-family: Courier, sans-serif;
     font-size: 24px;
 }
 
 h1, h2 {
     font-family: 'Press Start 2P';
+    color: #CC0066;
 }
 
 .container {
