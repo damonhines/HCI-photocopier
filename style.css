@@ -164,8 +164,11 @@ h1, h2 {
     outline: none;
     cursor: pointer;
     transition: box-shadow 0.2s;
+    margin-top: 20%;
 }
 
 .instruction-list {
-
+    padding-top: 28px;
+    padding-bottom: 28px;
+    color: #0066CC;
 }
