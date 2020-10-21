@@ -3,7 +3,7 @@ html {
     background: #303030;
     color: #CC0066;
     font-family: Courier, sans-serif;
-    font-size: 18px;
+    font-size: 24px;
 }
 
 h1, h2 {
@@ -164,4 +164,8 @@ h1, h2 {
     outline: none;
     cursor: pointer;
     transition: box-shadow 0.2s;
+}
+
+.instruction-list {
+
 }
