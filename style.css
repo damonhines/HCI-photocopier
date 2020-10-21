@@ -173,6 +173,4 @@ h1, h2 {
     color: white;
 }
 
-li:not(:last-child) {
-    margin-bottom: 5px;
-}
+ul li { padding: 5px 0px; }
