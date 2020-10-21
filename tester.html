@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Hearing Test</title>
+    <!--This project uses a keyboard called querty hancock by Stuart Memo https://github.com/stuartmemo/qwerty-hancock/blob/master/demo/index.html-->
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <h1 style="text-align:center">
+      Hearing Test
+    </h1>
+    <div id="testing_field">
+          <p id="instructions">Before taking the test, please make sure you are wearing headphones and that you are in a quiet environment.
+            Then press the button to start callibration for the test. 
+          </p>
+      <button class="pure-material-button-contained" id="main_button">Start Callibration</button>
+      <input hidden id="volume" type="range" min="0" max="1" step="0.005" value="0"/>
+      <audio id="audio" src="assets/CallibratingTrack.mp3"></audio>
+    </div>
+    <div id='results'></div>
+    <section></section>
+    <script src="js/waveCanvas.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
