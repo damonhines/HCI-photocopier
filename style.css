@@ -128,3 +128,7 @@ h1, h2 {
 .pure-material-button-contained:disabled::after {
     opacity: 0;
 }
+
+#volume{
+    width:100%;
+}
