@@ -153,7 +153,7 @@ function buttonHandler() {
     res.push(result);
     volumeSlider.value = 0;
     volumeSlider.hidden = true;
-    instructions.innerHTML = "When you are ready, go to the next test";
+    instructions.innerHTML = "When you are ready, press the \"Next Test\" button";
     state = 2;
   }
 }
