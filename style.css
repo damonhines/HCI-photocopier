@@ -144,7 +144,6 @@ h1, h2 {
  .welcome-button {
     position: relative;
     width:100%;
-    display:block;
     box-sizing: border-box;
     border: none;
     border-radius: 4px;
