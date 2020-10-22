@@ -157,5 +157,3 @@ function buttonHandler() {
     state = 2;
   }
 }
-
-
