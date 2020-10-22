@@ -106,7 +106,7 @@ function buttonHandler() {
   else if (clickers == midway) {
     clickers++
     startButton.innerHTML = "With WhiteNoise";
-    instructions.innerHTML = "We will now add white-noise and continue the test";
+    instructions.innerHTML = "White-noise will now be added to the test. To continue the test, press the \"WITH WHITENOISE\" button";
   }
   else if (clickers == midway + 1) {
     clickers++
@@ -128,7 +128,7 @@ function buttonHandler() {
 
   else if (state == 1) {
     startButton.innerHTML = "Start Test";
-    instructions.innerHTML = "Thank you for callibrating your audio, you can continue to the test"
+    instructions.innerHTML = "Thank you for callibrating your audio. Press the \"START TEST\" button to begin the test."
     volumeSlider.hidden = true;
     track.disconnect();
     oscGain.disconnect();
@@ -137,7 +137,7 @@ function buttonHandler() {
 
   else if (state == 2) {
     startButton.innerHTML = "I can hear it";
-    instructions.innerHTML = "Adjust the volume slider below (NOT YOUR DEVICE AUDIO) until you can barely hear the sound, if you cannot hear it at all, slide the volume slider back to 0 and continue";
+    instructions.innerHTML = "Adjust the volume slider below (NOT YOUR DEVICE AUDIO) until you can barely hear the sound. If you cannot hear any sound, please slide the volume slider back to 0(Left) and continue";
     volumeSlider.hidden = false;
     state = 3;
     runTest(state);
