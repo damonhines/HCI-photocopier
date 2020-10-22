@@ -6,7 +6,7 @@ const instructions = document.getElementById('instructions');
 const volumeSlider = document.getElementById('volume');
 let clickers = 0;
 //Number of tests run
-let numTests = 20;
+let numTests = 21;
 let freqlist = [100, 200, 300, 500, 800, 1000, 1400, 1800, 2400, 3000, 3500, 4000, 5000, 7000, 9000, 12000, 16000, 18000]
 //After which test we do the clicking.
 let midway = 10;
@@ -100,7 +100,7 @@ function buttonHandler() {
     whitGain.disconnect();
     volumeSlider.value = 0;
     startButton.innerHTML = "Finish test";
-    instructions.innerHTML = "Copy and paste the results from the table below into the texbox in the survey";
+    instructions.innerHTML = "Copy and paste the results from the table below into the textbox in the survey";
     displayResults();
   }
   else if (clickers == midway) {
