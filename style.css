@@ -181,4 +181,6 @@ ul li { padding: 5px 0px; }
 .logo {
     display: flex;
     justify-content: center;
+    height: 100px;
+    width: 100px;
 }
