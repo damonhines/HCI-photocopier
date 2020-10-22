@@ -110,14 +110,14 @@ function buttonHandler() {
   }
   else if (clickers == midway + 1) {
     clickers++
-    instructions.innerHTML = "Now raise your computer volume to a comfortable level";
+    instructions.innerHTML = "Now raise your computer volume to a comfortable level, then press the \"Finished Adjustment\" button";
     startButton.innerHTML = "Finished Adjustment"
     playWhiteNoise();
 
   }
   else if (state == 0) {
     audioElement.play();
-    startButton.innerHTML = "Finish Calibration";
+    startButton.innerHTML = "Finish Callibration";
     instructions.innerHTML = "Adjust the volume on your computer until you can barely hear the song"
     track.connect(ctx.destination);
     track.connect(oscGain).connect(ctx.destination);
@@ -137,7 +137,7 @@ function buttonHandler() {
 
   else if (state == 2) {
     startButton.innerHTML = "I can hear it";
-    instructions.innerHTML = "Adjust the volume slider below (NOT YOUR DEVICE AUDIO) until you can barely hear the sound. If you cannot hear any sound, please slide the volume slider back to 0(Left) and continue";
+    instructions.innerHTML = "Adjust the volume slider below (NOT YOUR DEVICE AUDIO) until you can barely hear the sound. If you cannot hear any sound, please slide the volume slider back to 0(Left), then press the \"I can hear\" button";
     volumeSlider.hidden = false;
     state = 3;
     runTest(state);
