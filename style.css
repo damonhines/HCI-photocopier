@@ -177,3 +177,8 @@ h1, h2 {
 }
 
 ul li { padding: 5px 0px; }
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
