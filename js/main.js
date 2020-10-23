@@ -77,6 +77,7 @@ function displayResults(){
         html+="</tr>";
     }
     html+="</table>";
+    startButton.style.display = "none";
     console.log(html);
     div.innerHTML = html;
 }
@@ -117,7 +118,7 @@ function buttonHandler() {
   }
   else if (state == 0) {
     audioElement.play();
-    startButton.innerHTML = "Finish Callibration";
+    startButton.innerHTML = "Finish Calibration";
     instructions.innerHTML = "Adjust the volume on your computer until you can barely hear the song"
     track.connect(ctx.destination);
     track.connect(oscGain).connect(ctx.destination);
@@ -128,7 +129,7 @@ function buttonHandler() {
 
   else if (state == 1) {
     startButton.innerHTML = "Start Test";
-    instructions.innerHTML = "Thank you for callibrating your audio. Press the \"START TEST\" button to begin the test."
+    instructions.innerHTML = "Thank you for calibrating your audio. Press the \"START TEST\" button to begin the test."
     volumeSlider.hidden = true;
     track.disconnect();
     oscGain.disconnect();
