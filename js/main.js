@@ -77,6 +77,7 @@ function displayResults(){
         html+="</tr>";
     }
     html+="</table>";
+    startButton.style.display = "none";
     console.log(html);
     div.innerHTML = html;
 }
