@@ -136,15 +136,11 @@ h1, h2 {
     width:100%;
 }
 
-.welcome {
-    max-width: 800px;
+.pinpad {
+    text-align: center;
     margin: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
- .welcome-button {
+ .pin-button {
     position: relative;
     width:100%;
     box-sizing: border-box;
@@ -192,9 +188,8 @@ ul li { padding: 5px 0px; }
   }
   
 .btn-matrix > .btn {
-    width: 33.3%;
-    height: 33.3%;
-    border: 1px solid #e9ecef;
+    width: 22%;
+    height: 10%;
   }
   
 .btn-matrix > .btn:first-child, .btn-matrix > .btn:last-child {
