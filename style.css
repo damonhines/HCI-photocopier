@@ -184,3 +184,23 @@ ul li { padding: 5px 0px; }
     height: 100px;
     width: 100px;
 }
+
+.btn-matrix { 
+    width: 10rem;
+    height: 10rem;
+    flex-wrap: wrap;
+  }
+  
+  .btn-matrix > .btn {
+    width: 33.3%;
+    height: 33.3%;
+    border: 1px solid #e9ecef;
+  }
+  
+  .btn-matrix > .btn:first-child, .btn-matrix > .btn:last-child {
+    border-radius: 0;
+  }
+  
+  .btn-matrix .btn + .btn {
+    margin-left: 0;
+  }
