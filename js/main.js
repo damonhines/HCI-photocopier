@@ -1,5 +1,6 @@
+
 document.getElementById("login").onclick = function () {
-  location.href = "https://damonhines.github.io/HCI-photocopier/instructions.html";
+  location.href = "instructions.html";
 };
 
 
