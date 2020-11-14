@@ -191,16 +191,16 @@ ul li { padding: 5px 0px; }
     flex-wrap: wrap;
   }
   
-  .btn-matrix > .btn {
+.btn-matrix > .btn {
     width: 33.3%;
     height: 33.3%;
     border: 1px solid #e9ecef;
   }
   
-  .btn-matrix > .btn:first-child, .btn-matrix > .btn:last-child {
+.btn-matrix > .btn:first-child, .btn-matrix > .btn:last-child {
     border-radius: 0;
   }
   
-  .btn-matrix .btn + .btn {
+.btn-matrix .btn + .btn {
     margin-left: 0;
   }
