@@ -1,3 +1,17 @@
+document.getElementById("login").onclick = function () {
+  location.href = "https://damonhines.github.io/HCI-photocopier/instructions.html";
+};
+
+
+
+
+
+
+
+
+
+
+//old code; use for reference if necessary
 const ctx = new (window.AudioContext || window.webkitAudioContext)()
 const fft = new AnalyserNode(ctx, { fftSize: 2048 })
 createWaveCanvas({ element: 'section', analyser: fft })
