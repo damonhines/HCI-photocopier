@@ -1,5 +1,6 @@
 console.log("Login Stage")
 let codeNumber = ""
+let copiesNumber = ""
 let displayNum = "****"
 document.getElementById('1button').addEventListener('click', () => {
   clickNumber("1");
@@ -75,14 +76,15 @@ function removeNumber() {
 
 
 function clickNumber(num) {
-  
+
   if(codeNumber.length >= 4){
     flashText();
     return;
-  }  
+  }
   codeNumber = codeNumber + (num);
   renderCode();
 }
+
 
 function renderCode() {
   displayNum = codeNumber;
@@ -102,3 +104,12 @@ function flashText(){
 }
 
 
+function clickCopies(num) {
+
+  copiesNumber = copiesNumber + (num);
+  renderCopies();
+}
+
+function renderCopies(){
+  console.log(copiesNumber);
+}
