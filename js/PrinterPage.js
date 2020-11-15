@@ -183,10 +183,11 @@ function renderSides(){
 
 function showDIV() {
 	var x = document.getElementById("showonselection");
-	x.style.display = "inline-block"
+  x.style.display = "inline-block"
   }
   
   function hideDIV() {
 	var x = document.getElementById("showonselection");
 	x.style.display = "none"
   }
+hideDIV();
