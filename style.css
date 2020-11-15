@@ -287,3 +287,7 @@ ul li { padding: 5px 0px; }
     text-decoration: none;
     cursor: pointer;
   }
+
+  .printerBox{
+      cursor:pointer;
+  }

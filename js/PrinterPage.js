@@ -1,11 +1,10 @@
 console.log("Printing Stage")
 
 let numCopies = "";
-
+let brightnessVal = 50;
 //NUMBERS MODAL
 let numbersModal = document.getElementById("numbersModal");
 
-console.log(numbersModal);
 
 document.getElementById("numberbutton").onclick= function(){
   numbersModal.style.display= 'block'
@@ -13,6 +12,33 @@ document.getElementById("numberbutton").onclick= function(){
 
 document.getElementById("closeNum").onclick= function(){
   numbersModal.style.display='none'
+}
+
+
+
+
+//BRIGHTNESS
+let brighModal = document.getElementById("brightModal");
+
+document.getElementById("brightBox").onclick= function(){
+  brightModal.style.display= 'block'
+}
+
+document.getElementById("closeBright").onclick= function(){
+  brightModal.style.display='none'
+}
+
+//BRIGHTNESS MODAL
+let brightSlider = document.getElementById("brightness");
+
+brightSlider.onchange = function(){
+  brightnessVal = Math.round(brightSlider.value*100);
+  document.getElementById('brightInfo').innerHTML="Brightness: " + String(brightnessVal) + "%";
+  document.getElementById('brightness-text').innerHTML = String(brightnessVal) + "%";
+}
+
+document.getElementById("subBright").onclick= function(){
+  brightModal.style.display='none'
 }
 
 
