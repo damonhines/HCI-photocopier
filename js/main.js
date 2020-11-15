@@ -64,7 +64,7 @@ function login(){
   }
   else{
     //PLACEHOLDER
-    document.location.href = 'instructions.html';
+    document.location.href = 'printerpage.html';
   }
 }
 
