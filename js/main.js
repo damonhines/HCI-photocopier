@@ -85,15 +85,6 @@ function clickNumber(num) {
   renderCode();
 }
 
-function clickCopies(num) {
-
-  copiesNumber = copiesNumber + (num);
-  renderCopies();
-}
-
-function renderCopies(){
-  console.log(copiesNumber);
-}
 
 function renderCode() {
   displayNum = codeNumber;
@@ -110,4 +101,15 @@ function flashText(){
   console.log("do not enter more")
   setTimeout(function()
   { document.getElementById("protected-text").style="color:darkgray"; }, 500);
+}
+
+
+function clickCopies(num) {
+
+  copiesNumber = copiesNumber + (num);
+  renderCopies();
+}
+
+function renderCopies(){
+  console.log(copiesNumber);
 }
