@@ -181,3 +181,12 @@ function renderSides(){
   document.getElementById("sidesInfo").innerHTML = sides;
 }
 
+function showDIV() {
+	var x = document.getElementById("showonselection");
+	x.style.display = "inline-block"
+  }
+  
+  function hideDIV() {
+	var x = document.getElementById("showonselection");
+	x.style.display = "none"
+  }
