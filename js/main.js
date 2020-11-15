@@ -75,13 +75,24 @@ function removeNumber() {
 
 
 function clickNumber(num) {
-  
+
   if(codeNumber.length >= 4){
     flashText();
     return;
-  }  
+  }
   codeNumber = codeNumber + (num);
   renderCode();
+}
+
+function clickCopies(num) {
+
+  codeNumber = codeNumber + (num);
+  renderCopies();
+}
+
+function renderCopies(){
+  displayNum = codeNumber;
+  console.log(codeNumber);
 }
 
 function renderCode() {
@@ -100,5 +111,3 @@ function flashText(){
   setTimeout(function()
   { document.getElementById("protected-text").style="color:darkgray"; }, 500);
 }
-
-
