@@ -2,6 +2,7 @@ console.log("Printing Stage")
 
 let numCopies = "";
 let brightnessVal = 50;
+let sides = "1 -> 1";
 //NUMBERS MODAL
 let numbersModal = document.getElementById("numbersModal");
 
@@ -13,6 +14,8 @@ document.getElementById("numberbutton").onclick= function(){
 document.getElementById("closeNum").onclick= function(){
   numbersModal.style.display='none'
 }
+
+
 
 
 
@@ -40,6 +43,69 @@ brightSlider.onchange = function(){
 document.getElementById("subBright").onclick= function(){
   brightModal.style.display='none'
 }
+
+//SIDES
+
+let sidesModal = document.getElementById("sidesModal");
+
+document.getElementById("sidesBox").onclick= function(){
+  sidesModal.style.display= 'block'
+}
+
+document.getElementById("closeSides").onclick= function(){
+  sidesModal.style.display='none'
+
+}
+document.getElementById("subSides").onclick= function(){
+  sidesModal.style.display='none'
+}
+
+//SIDES SELECTION BOX
+function setUpSidesEntry(){
+  let b11 = document.getElementById('1b1Cell')
+  let b12 = document.getElementById('1b2Cell')
+  let b21 = document.getElementById('2b1Cell')
+  let b22 = document.getElementById('2b2Cell')
+  
+  b11.style.border = "3px solid blue";
+  b11.onclick=function(){
+    b11.style.border = 	"3px solid blue";
+    b12.style.border = 	"1px solid #999999";
+    b22.style.border = 	"1px solid #999999";
+    b21.style.border = 	"1px solid #999999";
+    sides = "1 -> 1";
+    renderSides()
+  }
+
+  b12.onclick=function(){
+    b12.style.border = 	"3px solid blue";
+    b11.style.border = 	"1px solid #999999";
+    b22.style.border = 	"1px solid #999999";
+    b21.style.border = 	"1px solid #999999";
+    sides = "1 -> 2";
+    renderSides()
+  }
+
+  b22.onclick=function(){
+    b22.style.border = 	"3px solid blue";
+    b12.style.border = 	"1px solid #999999";
+    b11.style.border = 	"1px solid #999999";
+    b21.style.border = 	"1px solid #999999";
+    sides = "2 -> 2";
+    renderSides()
+  }
+
+  b21.onclick=function(){
+    b12.style.border = 	"1px solid #999999";
+    b22.style.border = 	"1px solid #999999";
+    b11.style.border = 	"1px solid #999999";
+    b21.style.border = 	"3px solid blue";
+    sides = "2 -> 1";
+    renderSides()
+  }
+}
+
+setUpSidesEntry();
 
 
 //NUMBERS BOX
@@ -111,4 +177,7 @@ function renderNumCopies(){
 
 }
 
+function renderSides(){
+  document.getElementById("sidesInfo").innerHTML = sides;
+}
 
