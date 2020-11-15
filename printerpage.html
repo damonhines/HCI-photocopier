@@ -16,8 +16,36 @@
     <div id="brightBox" class = "printerBox">
       <p id="brightInfo">Brightness: 50%</p>
     </div>
-    <div id="sourceBin"></div>
-    <div id="seperatorBin"></div>
+    <div>
+      <div class="radio-toolbar">
+        Paper Source
+        <input type="radio" id="Bin1" name="bin" value="bin1" checked>
+        <label for="Bin1">Bin 1</label>
+    
+        <input type="radio" id="Bin2" name="bin" value="bin2">
+        <label for="Bin2">Bin 2</label>
+    
+        <input type="radio" id="Bin3" name="bin" value="bin3">
+        <label for="Bin3">Bin 3</label>
+      </div>
+      <div class="radio-toolbar">
+      Separator Page
+      <input type="radio" id="Yes" name="separatortoggle" value="yes" onclick="showDIV()">
+      <label for="Yes">Yes</label>
+      <input type="radio" id="No" name="separatortoggle" value="no" onclick="hideDIV()" checked>
+      <label for="No">No</label>
+      <div id="showonselection" class="radio-toolbar">
+        Separator Source
+        <input type="radio" id="SepBin1" name="separatorbin" value="sepbin1" checked>
+        <label for="SepBin1">Bin 1</label>
+    
+        <input type="radio" id="SepBin2" name="separatorbin" value="sepbin2">
+        <label for="SepBin2">Bin 2</label>
+    
+        <input type="radio" id="SepBin3" name="separatorbin" value="sepbin3">
+        <label for="SepBin3">Bin 3</label>
+      </div>
+    </div>
     <div>
       <button id="numberbutton" class="btn btn-dark pin-button">Number of Copies: 0</button>
       <button id="printButton" class="btn btn-dark pin-button">PREVIEW</button>

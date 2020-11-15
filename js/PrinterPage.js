@@ -111,4 +111,14 @@ function renderNumCopies(){
 
 }
 
+// SEPARATOR PAGE
 
+function showDIV() {
+	var x = document.getElementById("showonselection");
+	x.style.display = "inline-block"
+  }
+  
+  function hideDIV() {
+	var x = document.getElementById("showonselection");
+	x.style.display = "none"
+  }
