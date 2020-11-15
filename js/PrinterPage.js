@@ -178,7 +178,7 @@ function renderNumCopies(){
 }
 
 function renderSides(){
-  document.getElementById("sidesInfo").innerHTML = sides;
+  document.getElementById("sidesInfo").innerHTML = "Sides: "+  sides;
 }
 
 function showDIV() {
