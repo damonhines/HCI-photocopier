@@ -414,6 +414,5 @@ ul li { padding: 5px 0px; }
     font-weight: 500;
     overflow: hidden;
     transition: box-shadow 0.2s;
-    margin-top: .4em;
     cursor: pointer;
 }
