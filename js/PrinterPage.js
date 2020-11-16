@@ -201,4 +201,7 @@ function progressBar(){
       i++;
     }
   }, 25);
+  setTimeout(() => {
+    document.getElementById("copyinglabel").innerHTML="Done!";
+  }, 2500);
 }
