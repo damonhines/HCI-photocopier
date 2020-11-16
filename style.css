@@ -383,7 +383,7 @@ ul li { padding: 5px 0px; }
     display: flex;
     width: 30rem;
     justify-content: space-between;
-    width: 20rem;
+    width: 30rem;
     border: .1rem black;
     background-color: #464343;
   }
