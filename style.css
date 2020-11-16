@@ -320,6 +320,7 @@ ul li { padding: 5px 0px; }
 	display: table-cell;
     padding: 3px 10px;
     cursor: pointer;
+    text-align: center;
 }
 .divTableHeading {
 	background-color: #EEE;
