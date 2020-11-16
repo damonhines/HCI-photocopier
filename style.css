@@ -431,7 +431,7 @@ ul li { padding: 5px 0px; }
 
 .sameRow {
     display: flex;
-
+    padding-bottom: 2em;
     justify-content: space-evenly;
     padding-left: 3em;
     font-size: 70%;
