@@ -425,6 +425,10 @@ ul li { padding: 5px 0px; }
 .different-elements {
     display: flex;
     justify-content: space-between;
+<<<<<<< HEAD
+=======
+    width: fit-content;
+>>>>>>> a50cbd5b8871ad386348384ae64b66ec0bf10061
     padding-bottom: 1em;
 }
 
