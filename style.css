@@ -392,6 +392,7 @@ ul li { padding: 5px 0px; }
     transform: translate(-50%, -50%);
     margin: auto;
     width: 70%;
+    height: 60%;
     position: absolute;
     background-color: grey;
 }
