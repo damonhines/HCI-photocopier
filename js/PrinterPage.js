@@ -1,7 +1,7 @@
 console.log("Printing Stage")
 
 let numCopies = "";
-let brightnessVal = 50;
+let brightnessVal = 0;
 let sides = "1 -> 1";
 //NUMBERS MODAL
 let numbersModal = document.getElementById("numbersModal");
