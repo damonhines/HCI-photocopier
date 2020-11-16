@@ -36,7 +36,7 @@ let brightSlider = document.getElementById("brightness");
 
 brightSlider.onchange = function(){
   brightnessVal = Math.round(brightSlider.value*100);
-  document.getElementById('brightInfo').innerHTML="Brightness: " + String(brightnessVal) + "%";
+  document.getElementById('brightInfo').innerHTML= String(brightnessVal) + "%";
   document.getElementById('brightness-text').innerHTML = String(brightnessVal) + "%";
 }
 
