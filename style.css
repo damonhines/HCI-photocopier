@@ -384,6 +384,7 @@ ul li { padding: 5px 0px; }
     justify-content: space-between;
     width: 20rem;
     border: .1rem black;
+    background-color: #464343;
   }
 .printing-stage {
     text-align: center;
@@ -392,8 +393,6 @@ ul li { padding: 5px 0px; }
     transform: translate(-50%, -50%);
     margin: auto;
     position: absolute;
-    width: 100%;
-    height: 50%;
     background-color: white;
 }
 .last-line {
