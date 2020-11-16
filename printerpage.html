@@ -11,19 +11,22 @@
   <img src="assets/team_logo.png" alt="team_logo" height="100px" width="100px">
   <div class="printing-stage">
     <h1 style="font-size: 2em;color: white;font-family: Arial;">Printer Settings</h1>
-    Sides:
+    <div class="sameRow">
+     <p1>Sides</p1>
+     <p1>Brightness</p1>
+     <p1>Paper Source</p1>
+     <p1>Separator</p1>
+    </div>
     <div class="different-elements"> 
       <div id="sidesBox" class = "printerBox">
         <p id = "sidesInfo">1 -> 1</p>
       </div>
-    </br>
-      Brightness:
+     
       <div id="brightBox" class = "printerBox">
         <p id="brightInfo">50%</p>
       </div>
-      <div>
         <div class="radio-toolbar">
-          Paper Source
+          
           <input type="radio" id="Bin1" name="bin" value="bin1" checked>
           <label for="Bin1">Bin 1</label>
 
@@ -34,13 +37,13 @@
           <label for="Bin3">Bin 3</label>
         </div>
         <div class="radio-toolbar">
-        Separator Page
+        
         <input type="radio" id="Yes" name="separatortoggle" value="yes" onclick="showDIV()">
         <label for="Yes">Yes</label>
         <input type="radio" id="No" name="separatortoggle" value="no" onclick="hideDIV()" checked>
         <label for="No">No</label>
         <div id="showonselection" class="radio-toolbar">
-          Separator Source
+          
           <input type="radio" id="SepBin1" name="separatorbin" value="sepbin1" checked>
           <label for="SepBin1">Bin 1</label>
 
@@ -50,7 +53,6 @@
           <input type="radio" id="SepBin3" name="separatorbin" value="sepbin3">
           <label for="SepBin3">Bin 3</label>
         </div>
-      </div>
       </div>
       </div>
     <div class="sameLine">

@@ -420,7 +420,15 @@ ul li { padding: 5px 0px; }
 
 .different-elements {
     display: flex;
-    width: 30rem;
     justify-content: space-between;
-    width: 30rem;
+    padding-bottom: 1em;
 }
+
+.sameRow {
+    display: flex;
+
+    justify-content: space-between;
+    padding-left: 3em;
+    font-size: 70%;
+    padding-right: 3em;
+  }
