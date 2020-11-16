@@ -377,3 +377,10 @@ ul li { padding: 5px 0px; }
   #showonselection{
       display: none
   }
+
+.sameLine {
+    display: flex;
+    justify-content: space-between;
+    width: 20rem;
+    border: .1rem black;
+  }
