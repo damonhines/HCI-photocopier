@@ -381,6 +381,7 @@ ul li { padding: 5px 0px; }
 
 .sameLine {
     display: flex;
+    width: 30rem;
     justify-content: space-between;
     width: 20rem;
     border: .1rem black;
