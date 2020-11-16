@@ -416,3 +416,10 @@ ul li { padding: 5px 0px; }
     transition: box-shadow 0.2s;
     cursor: pointer;
 }
+
+.different-elements {
+    display: flex;
+    width: 30rem;
+    justify-content: space-between;
+    width: 30rem;
+}
