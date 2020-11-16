@@ -243,9 +243,9 @@ ul li { padding: 5px 0px; }
     height: 20%;
   }
 
-.btn-matrix .btn + .btn {
+/* .btn-matrix .btn + .btn {
     margin-left: 0;
-  }
+  } */
 
   .modal {
     display: none; /* Hidden by default */

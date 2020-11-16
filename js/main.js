@@ -1,7 +1,7 @@
 console.log("Login Stage")
 let codeNumber = ""
 let copiesNumber = ""
-let displayNum = "****"
+let displayNum = "_ _ _ _"
 document.getElementById('1button').addEventListener('click', () => {
   clickNumber("1");
 })
@@ -81,7 +81,7 @@ function clickNumber(num) {
     flashText();
     return;
   }
-  codeNumber = codeNumber + (num);
+  codeNumber = codeNumber + "*";
   renderCode();
 }
 
@@ -90,7 +90,7 @@ function renderCode() {
   displayNum = codeNumber;
   //Add * until 4 digits are achived.
   while(displayNum.length<4){
-    displayNum = displayNum + "*"
+    displayNum = displayNum + "_"
   }
   document.getElementById("protected-text").textContent = displayNum;
   console.log(codeNumber);
