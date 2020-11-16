@@ -36,7 +36,7 @@ let brightSlider = document.getElementById("brightness");
 
 brightSlider.onchange = function(){
   brightnessVal = Math.round(brightSlider.value*100);
-  document.getElementById('brightInfo').innerHTML="Brightness: " + String(brightnessVal) + "%";
+  document.getElementById('brightInfo').innerHTML= String(brightnessVal) + "%";
   document.getElementById('brightness-text').innerHTML = String(brightnessVal) + "%";
 }
 
@@ -178,7 +178,7 @@ function renderNumCopies(){
 }
 
 function renderSides(){
-  document.getElementById("sidesInfo").innerHTML = "Sides: "+  sides;
+  document.getElementById("sidesInfo").innerHTML =  sides;
 }
 
 function showDIV() {
@@ -186,7 +186,7 @@ function showDIV() {
   x.style.display = "inline-block"
   }
   
-  function hideDIV() {
+function hideDIV() {
 	var x = document.getElementById("showonselection");
 	x.style.display = "none"
   }

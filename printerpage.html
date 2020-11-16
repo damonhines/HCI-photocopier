@@ -10,7 +10,7 @@
 <body>
   <img src="assets/team_logo.png" alt="team_logo" height="100px" width="100px">
   <div class="printing-stage">
-    <h1 style="font-size: 2em;color: #CC0066;font-family: Arial;">Printer Settings</h1>
+    <h1 style="font-size: 2em;color: white;font-family: Arial;">Printer Settings</h1>
     Sides:
     <div class="different-elements"> 
       <div id="sidesBox" class = "printerBox">
@@ -52,10 +52,11 @@
         </div>
       </div>
       </div>
+      </div>
     <div class="sameLine">
-      <button id="numberbutton" class="btn btn-dark last-line">Number of Copies: 0</button>
-      <button id="printButton" class="btn btn-dark last-line">PREVIEW</button>
-      <button id="printButton" class="btn btn-dark last-line">COPY</button>
+      <button id="printButton" class="btn btn-dark last-line" onclick="document.location='index.html'">LOGOUT</button>
+      <button id="numberbutton" class="btn btn-dark last-line">Number of Copies: 1</button>
+      <button id="printButton" class="btn btn-dark last-line" onclick="document.location='printing.html'">COPY</button>
     </div>
 
     <!-- The Modal -->
