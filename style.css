@@ -419,7 +419,7 @@ ul li { padding: 5px 0px; }
 .different-elements {
     display: flex;
     justify-content: space-between;
-<<<<<<< HEAD
+    width: fit-content;
     padding-bottom: 1em;
 }
 
@@ -431,7 +431,6 @@ ul li { padding: 5px 0px; }
     font-size: 70%;
     padding-right: 3em;
   }
-=======
     width: 30rem;
 }
 
@@ -526,4 +525,3 @@ ul li { padding: 5px 0px; }
 .bright-slider{
     width:100%;
 }
->>>>>>> 124fc8d6716bd98f1d70c239bbbb6d0c487a5bf6
