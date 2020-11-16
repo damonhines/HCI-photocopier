@@ -138,7 +138,7 @@ h1, h2 {
 
 .pinpad {
     text-align: center;
-    top: 50%;
+    top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin: auto;
@@ -151,7 +151,6 @@ h1, h2 {
     border: none;
     border-radius: 4px;
     min-width: 64px;
-    height: 36px;
     text-align: center;
     text-overflow: ellipsis;
     text-transform: uppercase;
@@ -173,7 +172,6 @@ h1, h2 {
     border: none;
     border-radius: 4px;
     min-width: 64px;
-    height: 36px;
     text-align: center;
     text-overflow: ellipsis;
     text-transform: uppercase;
@@ -196,7 +194,6 @@ h1, h2 {
     border: none;
     border-radius: 4px;
     min-width: 64px;
-    height: 36px;
     text-align: center;
     text-overflow: ellipsis;
     text-transform: uppercase;
@@ -236,14 +233,14 @@ ul li { padding: 5px 0px; }
 }
 
 .btn-matrix {
-    width: 40rem;
-    height: 20rem;
+    width: 100%;
+    height: 50%;
     flex-wrap: wrap;
   }
 
 .btn-matrix > .btn {
     width: 32%;
-    height: 10%;
+    height: 20%;
   }
 
 .btn-matrix .btn + .btn {
@@ -263,7 +260,7 @@ ul li { padding: 5px 0px; }
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
-  
+
   /* Modal Content */
   .modal-content {
     background-color: #fefefe;
@@ -272,7 +269,7 @@ ul li { padding: 5px 0px; }
     border: 1px solid #888;
     width: 80%;
   }
-  
+
   /* The Close Button */
   .close {
     color: #aaaaaa;
@@ -280,7 +277,7 @@ ul li { padding: 5px 0px; }
     font-size: 28px;
     font-weight: bold;
   }
-  
+
   .close:hover,
   .close:focus {
     color: #000;
@@ -346,13 +343,13 @@ ul li { padding: 5px 0px; }
 .radio-toolbar {
     margin: auto;
   }
-  
+
   .radio-toolbar input[type="radio"] {
     opacity: 0;
     position: fixed;
     width: 0;
   }
-  
+
   .radio-toolbar label {
       display: inline-block;
       background-color: rgb(0, 170, 255);
@@ -362,15 +359,15 @@ ul li { padding: 5px 0px; }
       border: 2px solid #444;
       border-radius: 4px;
   }
-  
+
   .radio-toolbar label:hover {
     background-color: #dfd;
   }
-  
+
   .radio-toolbar input[type="radio"]:focus + label {
       border: 2px dashed #444;
   }
-  
+
   .radio-toolbar input[type="radio"]:checked + label {
       background-color: rgb(74, 74, 147);
       border-color: #4c4;
@@ -394,6 +391,7 @@ ul li { padding: 5px 0px; }
     left: 50%;
     transform: translate(-50%, -50%);
     margin: auto;
+    width: 70%;
     position: absolute;
     background-color: grey;
 }
@@ -421,6 +419,7 @@ ul li { padding: 5px 0px; }
 .different-elements {
     display: flex;
     justify-content: space-between;
+<<<<<<< HEAD
     padding-bottom: 1em;
 }
 
@@ -432,3 +431,99 @@ ul li { padding: 5px 0px; }
     font-size: 70%;
     padding-right: 3em;
   }
+=======
+    width: 30rem;
+}
+
+.pinpad2 {
+    text-align: center;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    position: absolute;
+}
+
+ .pin-button2 {
+    position: relative;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    min-width: 64px;
+    height: 36px;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255));
+    background-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system);
+    font-size: 20px;
+    font-weight: 500;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+    margin-top: .4em;
+    cursor: pointer;
+}
+.undo-button2 {
+    position: relative;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    min-width: 64px;
+    height: 36px;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    color: rgb(var(--pure-material-onprimary-rgb, 255, 0, 0));
+    background-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system);
+    font-size: 20px;
+    font-weight: 500;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+    margin-top: .4em;
+    cursor: pointer;
+}
+
+.enter-button2 {
+    position: relative;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    min-width: 64px;
+    height: 36px;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255));
+    background-color: rgb(var(--pure-material-primary-rgb,  102, 204, 0));
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system);
+    font-size: 20px;
+    font-weight: 500;
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+    margin-top: .4em;
+    cursor: pointer;
+}
+
+
+.btn-matrix2 {
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+  }
+
+.btn-matrix2 > .btn {
+    width: 30%;
+    height: 10%;
+  }
+
+.btn-matrix2 .btn + .btn {
+    margin-left: 0;
+  }
+
+.bright-slider{
+    width:100%;
+}
+>>>>>>> 124fc8d6716bd98f1d70c239bbbb6d0c487a5bf6
