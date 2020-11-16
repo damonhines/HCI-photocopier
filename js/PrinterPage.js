@@ -191,3 +191,14 @@ function hideDIV() {
 	x.style.display = "none"
   }
 hideDIV();
+
+function progressBar(){
+  var x = document.getElementById("printingbar");
+  var i = 0;
+  setInterval(() => {
+    if(i < 101){
+      x.value = i;
+      i++;
+    }
+  }, 25);
+}

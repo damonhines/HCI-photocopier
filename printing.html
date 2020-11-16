@@ -1,5 +1,24 @@
-<html>
-  <body>
-    Printing...
-  </body>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>MSignificantPrinting</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="progressBar()">
+  <img src="assets/team_logo.png" alt="team_logo" height="100px" width="100px">
+  <div class="printing-stage">
+    Copying...
+  </br>
+  <script src="js/PrinterPage.js"></script>
+    <progress id="printingbar" value="0" max="100">50%</progress>
+  <div class="sameLine">
+    <button id="printButton" class="btn btn-dark last-line" onclick="document.location='printerpage.html'">ANOTHER COPY</button>
+    <button id="printButton" class="btn btn-dark last-line" onclick="document.location='index.html'">LOGOUT</button>
+  </div>
+  </div>
+</br> 
+
+</body>
 </html>
